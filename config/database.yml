@@ -80,7 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: ""
+  database: <%= ENV['DATABASE_NAME'] %>
   # database: <%= Rails.application.credentials.dig :aws, :rds, :database %>
   username: <%= ENV['DATABASE_USER'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
